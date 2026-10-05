@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Myles Hansford | Business Marketing & Brand Strategy Portfolio</title>
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Inter for clean, modern readability -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,21 +14,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+    /* ==========================================================================
+       1. GLOBAL STYLES & CSS VARIABLES
+       ========================================================================== */
     :root {
-      --primary-navy: #0A192F;
-      --accent-blue: #0066CC;
-      --accent-teal: #00B4D8;
-      --bg-main: #F8FAFC;
-      --bg-card: #FFFFFF;
-      --text-main: #1E293B;
-      --text-muted: #64748B;
-      --border-color: #E2E8F0;
+      /* Engineering & Professional Color Palette */
+      --primary-navy: #0A192F;      /* Deep background & high-contrast headers */
+      --accent-blue: #0066CC;       /* Primary interactive buttons & key accents */
+      --accent-teal: #00B4D8;       /* Secondary highlights & hover states */
+      --bg-main: #F8FAFC;           /* Off-white light background for high contrast */
+      --bg-card: #FFFFFF;           /* Pure white card backgrounds */
+      --text-main: #1E293B;         /* Dark slate for optimal body readability */
+      --text-muted: #64748B;        /* Slate gray for secondary details */
+      --border-color: #E2E8F0;      /* Subtle divider lines */
+      
+      /* Layout Constants */
       --max-width: 1100px;
       --transition-speed: 0.3s;
       --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
       --hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     }
 
+    /* Reset & Base Formatting */
     * {
       margin: 0;
       padding: 0;
@@ -36,7 +43,7 @@
     }
 
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: smooth; /* Smooth scrolling across navigation links */
       font-size: 16px;
     }
 
@@ -93,6 +100,7 @@
       border-radius: 2px;
     }
 
+    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -128,6 +136,7 @@
       transform: translateY(-2px);
     }
 
+    /* Tag Badges */
     .tag {
       display: inline-block;
       padding: 0.25rem 0.75rem;
@@ -138,6 +147,9 @@
       font-weight: 600;
     }
 
+    /* ==========================================================================
+       2. HEADER & NAVIGATION
+       ========================================================================== */
     header {
       position: fixed;
       top: 0;
@@ -147,6 +159,7 @@
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border-color);
       z-index: 1000;
+      transition: all var(--transition-speed) ease;
     }
 
     .nav-container {
@@ -182,6 +195,7 @@
       color: var(--accent-blue);
     }
 
+    /* Mobile Menu Toggle Button */
     .menu-toggle {
       display: none;
       font-size: 1.5rem;
@@ -189,6 +203,9 @@
       cursor: pointer;
     }
 
+    /* ==========================================================================
+       3. HERO SECTION
+       ========================================================================== */
     .hero {
       padding-top: 9rem;
       padding-bottom: 5rem;
@@ -236,6 +253,9 @@
       flex-wrap: wrap;
     }
 
+    /* ==========================================================================
+       4. ABOUT ME SECTION
+       ========================================================================== */
     .about-grid {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -283,6 +303,9 @@
       text-align: right;
     }
 
+    /* ==========================================================================
+       5. PROJECTS SECTION
+       ========================================================================== */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -356,6 +379,9 @@
       flex-wrap: wrap;
     }
 
+    /* ==========================================================================
+       6. SKILLS SECTION
+       ========================================================================== */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -405,6 +431,7 @@
       border: 1px solid var(--border-color);
     }
 
+    /* AI Highlight Banner */
     .ai-banner {
       grid-column: 1 / -1;
       background: linear-gradient(135deg, #0A192F 0%, #1E3A8A 100%);
@@ -424,4 +451,578 @@
 
     .ai-banner h3 {
       font-size: 1.2rem;
-      margin-bottom: 0.25
+      margin-bottom: 0.25rem;
+    }
+
+    .ai-banner p {
+      font-size: 0.95rem;
+      color: #CBD5E1;
+    }
+
+    /* ==========================================================================
+       7. CAREER GOALS & ATHLETICS SECTION
+       ========================================================================== */
+    .goals-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .goal-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-top: 4px solid var(--accent-blue);
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    .goal-card h3 {
+      font-size: 1.2rem;
+      color: var(--primary-navy);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .goal-card p {
+      color: var(--text-main);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* ==========================================================================
+       8. CONTACT & FOOTER SECTION
+       ========================================================================== */
+    .contact-section {
+      background-color: var(--primary-navy);
+      color: #FFFFFF;
+      padding: 5rem 0 2rem 0;
+    }
+
+    .contact-section .section-title {
+      color: #FFFFFF;
+    }
+
+    .contact-section .section-subtitle {
+      color: #94A3B8;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .contact-info p {
+      color: #CBD5E1;
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1rem;
+      color: #E2E8F0;
+    }
+
+    .contact-item i {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-teal);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      background-color: #1E293B;
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-teal);
+    }
+
+    footer {
+      border-top: 1px solid #334155;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: #94A3B8;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-links a {
+      color: #94A3B8;
+      font-size: 1.2rem;
+    }
+
+    .social-links a:hover {
+      color: var(--accent-teal);
+    }
+
+    /* ==========================================================================
+       9. RESPONSIVE DESIGN (MEDIA QUERIES)
+       ========================================================================== */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .about-grid,
+      .goals-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ai-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        display: none; /* Hide on mobile by default */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #FFFFFF;
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--hover-shadow);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+     HEADER / NAVIGATION
+     ========================================================================== -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">Myles<span>.Hansford</span></a>
+      
+      <!-- Hamburger Icon for Mobile Viewports -->
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects & Research</a>
+        <a href="#skills">Skills & AI</a>
+        <a href="#goals">Goals & Athletics</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+     HERO SECTION
+     ========================================================================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <i class="fas fa-graduation-cap"></i> Student-Athlete | Class of 2028[cite: 1]
+        </div>
+        <h1>Business Marketing & Brand Strategy Portfolio[cite: 1]</h1>
+        <p class="hero-subtitle">
+          Driven by brand positioning, visual storytelling, and strategic research[cite: 1]. Combining analytical rigor with creative execution at the University of New Haven[cite: 1].
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-folder-open"></i> View My Work
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-paper-plane"></i> Get in Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     ABOUT ME SECTION
+     ========================================================================== -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">Connecting strategic alignment, creative direction, and performance discipline[cite: 1].</p>
+      
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a Business Marketing student and student-athlete at the University of New Haven[cite: 1]. My focus rests at the intersection of consumer behavior, brand positioning, and visual storytelling[cite: 1]. Whether directing video skits for campus marketing or analyzing coverage schemes on the football field[cite: 1], I thrive in fast-paced environments where clear communication and strategic alignment drive results[cite: 1].
+          </p>
+          <p>
+            As a student-athlete playing Safety[cite: 1], I balance rigorous academic coursework with daily film study, high-pressure execution, and team alignment[cite: 1]. I apply this same level of discipline to market research and project strategy[cite: 1]—aiming to build brands that resonate deeply with target audiences[cite: 1].
+          </p>
+        </div>
+
+        <!-- Quick Summary Box -->
+        <div class="about-card">
+          <h3>Quick Facts</h3>
+          <ul class="info-list">
+            <li>
+              <span class="label">University:</span>
+              <span class="value">Univ. of New Haven[cite: 1]</span>
+            </li>
+            <li>
+              <span class="label">Major:</span>
+              <span class="value">B.S. Business Marketing[cite: 1]</span>
+            </li>
+            <li>
+              <span class="label">Graduation:</span>
+              <span class="value">Expected May 2028[cite: 1]</span>
+            </li>
+            <li>
+              <span class="label">Role:</span>
+              <span class="value">Creative Assistant / Athlete[cite: 1]</span>
+            </li>
+            <li>
+              <span class="label">Location:</span>
+              <span class="value">West Haven, CT[cite: 1]</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     PROJECTS / COURSEWORK SECTION
+     ========================================================================== -->
+  <section id="projects" style="background-color: #FFFFFF;">
+    <div class="container">
+      <h2 class="section-title">Projects & Research</h2>
+      <p class="section-subtitle">Case studies in market analysis, strategy, and creative execution[cite: 1].</p>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <i class="fas fa-shield-halved project-icon"></i>
+              <span class="tag">Market Strategy</span>
+            </div>
+            <h3>Chromaguard Helmet Project[cite: 1]</h3>
+            <p>Market research and competitive positioning focused on mitigating CTE risks in youth sports[cite: 1].</p>
+            <ul class="project-bullets">
+              <li>Analyzed youth sports safety gaps and CTE risk factors to define target audience requirements[cite: 1].</li>
+              <li>Constructed a competitive Venn diagram mapping feature overlaps across leading market brands[cite: 1].</li>
+              <li>Engineered a strategic $500 price point accompanied by a 15% team volume discount model[cite: 1].</li>
+            </ul>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Pricing Model[cite: 1]</span>
+            <span class="tag">Competitor Analysis[cite: 1]</span>
+            <span class="tag">Market Research[cite: 1]</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <i class="fas fa-lightbulb project-icon"></i>
+              <span class="tag">Academic Research</span>
+            </div>
+            <h3>Entrepreneurial Mindset Paper[cite: 1]</h3>
+            <p>Strategic analysis on how entrepreneurs leverage calculated risk-taking to unlock innovative growth[cite: 1].</p>
+            <ul class="project-bullets">
+              <li>Evaluated real-world venture case studies to extract key patterns in strategic decision-making[cite: 1].</li>
+              <li>Investigated frameworks for evaluating risk versus potential reward in early-stage innovations[cite: 1].</li>
+              <li>Synthesized research into structured executive summaries detailing business opportunity identification[cite: 1].</li>
+            </ul>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Strategic Thinking[cite: 1]</span>
+            <span class="tag">Risk Analysis[cite: 1]</span>
+            <span class="tag">Case Study[cite: 1]</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <i class="fas fa-clapperboard project-icon"></i>
+              <span class="tag">Applied Creative</span>
+            </div>
+            <h3>Charger Rec Content Direction[cite: 1]</h3>
+            <p>End-to-end visual planning, scripting, and direction for campus marketing skits and video content[cite: 1].</p>
+            <ul class="project-bullets">
+              <li>Visualized story flows and drafted scene-by-scene scripts to align with student engagement goals[cite: 1].</li>
+              <li>Directed actors on set and guided camera angles based on structured visual plans[cite: 1].</li>
+              <li>Created engaging promotional videos designed to build brand awareness on campus[cite: 1].</li>
+            </ul>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Visual Storytelling[cite: 1]</span>
+            <span class="tag">Scriptwriting[cite: 1]</span>
+            <span class="tag">Creative Direction[cite: 1]</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     SKILLS & TECHNICAL COMPETENCIES SECTION
+     ========================================================================== -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills & Competencies</h2>
+      <p class="section-subtitle">Core competencies spanning strategic analysis, creative production, and AI literacy[cite: 1].</p>
+
+      <div class="skills-grid">
+        
+        <!-- Category 1 -->
+        <div class="skill-category">
+          <h3><i class="fas fa-chart-line"></i> Strategic Marketing</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span>Market Research[cite: 1]</span>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <div class="skill-item">
+              <span>Competitor Mapping[cite: 1]</span>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <div class="skill-item">
+              <span>Pricing Strategy[cite: 1]</span>
+              <span class="skill-level">Working Knowledge</span>
+            </div>
+            <div class="skill-item">
+              <span>Revenue Modeling[cite: 1]</span>
+              <span class="skill-level">Developing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="skill-category">
+          <h3><i class="fas fa-palette"></i> Creative Direction</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span>Visual Storytelling[cite: 1]</span>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <div class="skill-item">
+              <span>Scene Visualization[cite: 1]</span>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <div class="skill-item">
+              <span>Scriptwriting[cite: 1]</span>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <div class="skill-item">
+              <span>Content Development[cite: 1]</span>
+              <span class="skill-level">Proficient</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="skill-category">
+          <h3><i class="fas fa-users"></i> Execution & Leadership</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span>Team Communication[cite: 1]</span>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-item">
+              <span>Project Planning[cite: 1]</span>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-item">
+              <span>Time Management[cite: 1]</span>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-item">
+              <span>On-Set Direction[cite: 1]</span>
+              <span class="skill-level">Proficient</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Literacy Highlight Banner -->
+        <div class="ai-banner">
+          <div class="ai-banner-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div>
+            <h3>AI Literacy & Modern Workflow Integration</h3>
+            <p>
+              Leveraging generative AI frameworks for market persona research, preliminary script ideation, and workflow optimization. Committed to synthesizing AI capabilities with human-centered brand strategy.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     CAREER GOALS & ATHLETIC LEADERSHIP SECTION
+     ========================================================================== -->
+  <section id="goals" style="background-color: #FFFFFF;">
+    <div class="container">
+      <h2 class="section-title">Career Goals & Athletic Focus</h2>
+      <p class="section-subtitle">Long-term vision driven by high performance, accountability, and continuous learning[cite: 1].</p>
+
+      <div class="goals-grid">
+        
+        <div class="goal-card">
+          <h3><i class="fas fa-bullseye"></i> Professional Trajectory</h3>
+          <p>
+            My immediate target is to secure a brand strategy, market research, or digital strategy internship[cite: 1]. Long-term, I aim to direct integrated marketing campaigns that merge data-driven market positioning with creative video storytelling[cite: 1]. I bring an energetic, growth-oriented mindset focused on building tangible value for modern consumer brands[cite: 1].
+          </p>
+        </div>
+
+        <div class="goal-card">
+          <h3><i class="fas fa-football"></i> Collegiate Athletic Discipline</h3>
+          <p>
+            As a Safety for the UNH Football Team[cite: 1], my primary responsibilities include maintaining deep coverage, diagnosing offensive formations, and communicating coverage adjustments in real time[cite: 1]. Balancing 20+ hours weekly of film study and physical training alongside academics has built strong discipline, rapid problem-solving, and team accountability[cite: 1].
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     CONTACT & FOOTER SECTION
+     ========================================================================== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">Interested in internships, creative collaborations, or brand discussions? Let's connect.</p>
+
+      <div class="contact-grid">
+        
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <p>
+            I am actively seeking marketing internship opportunities and brand strategy projects for Summer 2027[cite: 1]. Reach out via email or connect with me on LinkedIn!
+          </p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>mhans6@unh.newhaven.edu</span>[cite: 1]
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-location-dot"></i>
+              <span>West Haven, CT</span>[cite: 1]
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>University of New Haven</span>[cite: 1]
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Placeholder -->
+        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" rows="4" placeholder="Your Message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2026 Myles Hansford. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     JAVASCRIPT: Smooth Navigation & Mobile Menu Toggle
+     ========================================================================== -->
+  <script>
+    // Mobile Navigation Menu Toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    mobileMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when a navigation link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
