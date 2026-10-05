@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Myles Hansford | Business Marketing & Brand Strategy Portfolio</title>
   
-  <!-- Google Fonts: Inter for clean, modern readability -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,28 +14,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* ==========================================================================
-       1. GLOBAL STYLES & CSS VARIABLES
-       ========================================================================== */
     :root {
-      /* Engineering & Professional Color Palette */
-      --primary-navy: #0A192F;      /* Deep background & high-contrast headers */
-      --accent-blue: #0066CC;       /* Primary interactive buttons & key accents */
-      --accent-teal: #00B4D8;       /* Secondary highlights & hover states */
-      --bg-main: #F8FAFC;           /* Off-white light background for high contrast */
-      --bg-card: #FFFFFF;           /* Pure white card backgrounds */
-      --text-main: #1E293B;         /* Dark slate for optimal body readability */
-      --text-muted: #64748B;        /* Slate gray for secondary details */
-      --border-color: #E2E8F0;      /* Subtle divider lines */
-      
-      /* Layout Constants */
+      --primary-navy: #0A192F;
+      --accent-blue: #0066CC;
+      --accent-teal: #00B4D8;
+      --bg-main: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --border-color: #E2E8F0;
       --max-width: 1100px;
       --transition-speed: 0.3s;
       --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
       --hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     }
 
-    /* Reset & Base Formatting */
     * {
       margin: 0;
       padding: 0;
@@ -43,7 +36,7 @@
     }
 
     html {
-      scroll-behavior: smooth; /* Smooth scrolling across navigation links */
+      scroll-behavior: smooth;
       font-size: 16px;
     }
 
@@ -100,7 +93,6 @@
       border-radius: 2px;
     }
 
-    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -136,7 +128,6 @@
       transform: translateY(-2px);
     }
 
-    /* Tag Badges */
     .tag {
       display: inline-block;
       padding: 0.25rem 0.75rem;
@@ -147,9 +138,6 @@
       font-weight: 600;
     }
 
-    /* ==========================================================================
-       2. HEADER & NAVIGATION
-       ========================================================================== */
     header {
       position: fixed;
       top: 0;
@@ -159,7 +147,6 @@
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border-color);
       z-index: 1000;
-      transition: all var(--transition-speed) ease;
     }
 
     .nav-container {
@@ -195,7 +182,6 @@
       color: var(--accent-blue);
     }
 
-    /* Mobile Menu Toggle Button */
     .menu-toggle {
       display: none;
       font-size: 1.5rem;
@@ -203,9 +189,6 @@
       cursor: pointer;
     }
 
-    /* ==========================================================================
-       3. HERO SECTION
-       ========================================================================== */
     .hero {
       padding-top: 9rem;
       padding-bottom: 5rem;
@@ -253,9 +236,6 @@
       flex-wrap: wrap;
     }
 
-    /* ==========================================================================
-       4. ABOUT ME SECTION
-       ========================================================================== */
     .about-grid {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -303,9 +283,6 @@
       text-align: right;
     }
 
-    /* ==========================================================================
-       5. PROJECTS SECTION
-       ========================================================================== */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -379,9 +356,6 @@
       flex-wrap: wrap;
     }
 
-    /* ==========================================================================
-       6. SKILLS SECTION
-       ========================================================================== */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -431,7 +405,6 @@
       border: 1px solid var(--border-color);
     }
 
-    /* AI Highlight Banner */
     .ai-banner {
       grid-column: 1 / -1;
       background: linear-gradient(135deg, #0A192F 0%, #1E3A8A 100%);
@@ -459,9 +432,6 @@
       color: #CBD5E1;
     }
 
-    /* ==========================================================================
-       7. CAREER GOALS & ATHLETICS SECTION
-       ========================================================================== */
     .goals-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -492,9 +462,6 @@
       line-height: 1.7;
     }
 
-    /* ==========================================================================
-       8. CONTACT & FOOTER SECTION
-       ========================================================================== */
     .contact-section {
       background-color: var(--primary-navy);
       color: #FFFFFF;
@@ -595,9 +562,6 @@
       color: var(--accent-teal);
     }
 
-    /* ==========================================================================
-       9. RESPONSIVE DESIGN (MEDIA QUERIES)
-       ========================================================================== */
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2.2rem;
@@ -615,7 +579,7 @@
       }
 
       .nav-links {
-        display: none; /* Hide on mobile by default */
+        display: none;
         position: absolute;
         top: 70px;
         left: 0;
@@ -645,14 +609,10 @@
 </head>
 <body>
 
-  <!-- ==========================================================================
-     HEADER / NAVIGATION
-     ========================================================================== -->
   <header>
     <div class="container nav-container">
       <a href="#" class="logo">Myles<span>.Hansford</span></a>
       
-      <!-- Hamburger Icon for Mobile Viewports -->
       <div class="menu-toggle" id="mobile-menu">
         <i class="fas fa-bars"></i>
       </div>
@@ -667,16 +627,13 @@
     </div>
   </header>
 
-  <!-- ==========================================================================
-     HERO SECTION
-     ========================================================================== -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
         <div class="hero-eyebrow">
           <i class="fas fa-graduation-cap"></i> Student-Athlete | Class of 2028[cite: 1]
         </div>
-        <h1>Business Marketing & Brand Strategy Portfolio[cite: 1]</h1>
+        <h1>Business Marketing & Brand Strategy Portfolio</h1>
         <p class="hero-subtitle">
           Driven by brand positioning, visual storytelling, and strategic research[cite: 1]. Combining analytical rigor with creative execution at the University of New Haven[cite: 1].
         </p>
@@ -692,13 +649,10 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-     ABOUT ME SECTION
-     ========================================================================== -->
   <section id="about">
     <div class="container">
       <h2 class="section-title">About Me</h2>
-      <p class="section-subtitle">Connecting strategic alignment, creative direction, and performance discipline[cite: 1].</p>
+      <p class="section-subtitle">Connecting strategic alignment, creative direction, and performance discipline.</p>
       
       <div class="about-grid">
         <div class="about-text">
@@ -710,7 +664,6 @@
           </p>
         </div>
 
-        <!-- Quick Summary Box -->
         <div class="about-card">
           <h3>Quick Facts</h3>
           <ul class="info-list">
@@ -740,17 +693,12 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-     PROJECTS / COURSEWORK SECTION
-     ========================================================================== -->
   <section id="projects" style="background-color: #FFFFFF;">
     <div class="container">
       <h2 class="section-title">Projects & Research</h2>
-      <p class="section-subtitle">Case studies in market analysis, strategy, and creative execution[cite: 1].</p>
+      <p class="section-subtitle">Case studies in market analysis, strategy, and creative execution.</p>
 
       <div class="projects-grid">
-        
-        <!-- Project 1 -->
         <div class="project-card">
           <div>
             <div class="project-header">
@@ -772,7 +720,6 @@
           </div>
         </div>
 
-        <!-- Project 2 -->
         <div class="project-card">
           <div>
             <div class="project-header">
@@ -794,7 +741,6 @@
           </div>
         </div>
 
-        <!-- Project 3 -->
         <div class="project-card">
           <div>
             <div class="project-header">
@@ -815,22 +761,16 @@
             <span class="tag">Creative Direction[cite: 1]</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-     SKILLS & TECHNICAL COMPETENCIES SECTION
-     ========================================================================== -->
   <section id="skills">
     <div class="container">
       <h2 class="section-title">Skills & Competencies</h2>
-      <p class="section-subtitle">Core competencies spanning strategic analysis, creative production, and AI literacy[cite: 1].</p>
+      <p class="section-subtitle">Core competencies spanning strategic analysis, creative production, and AI literacy.</p>
 
       <div class="skills-grid">
-        
-        <!-- Category 1 -->
         <div class="skill-category">
           <h3><i class="fas fa-chart-line"></i> Strategic Marketing</h3>
           <div class="skill-list">
@@ -853,7 +793,6 @@
           </div>
         </div>
 
-        <!-- Category 2 -->
         <div class="skill-category">
           <h3><i class="fas fa-palette"></i> Creative Direction</h3>
           <div class="skill-list">
@@ -876,7 +815,6 @@
           </div>
         </div>
 
-        <!-- Category 3 -->
         <div class="skill-category">
           <h3><i class="fas fa-users"></i> Execution & Leadership</h3>
           <div class="skill-list">
@@ -899,7 +837,6 @@
           </div>
         </div>
 
-        <!-- AI Literacy Highlight Banner -->
         <div class="ai-banner">
           <div class="ai-banner-icon">
             <i class="fas fa-brain"></i>
@@ -911,21 +848,16 @@
             </p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-     CAREER GOALS & ATHLETIC LEADERSHIP SECTION
-     ========================================================================== -->
   <section id="goals" style="background-color: #FFFFFF;">
     <div class="container">
       <h2 class="section-title">Career Goals & Athletic Focus</h2>
-      <p class="section-subtitle">Long-term vision driven by high performance, accountability, and continuous learning[cite: 1].</p>
+      <p class="section-subtitle">Long-term vision driven by high performance, accountability, and continuous learning.</p>
 
       <div class="goals-grid">
-        
         <div class="goal-card">
           <h3><i class="fas fa-bullseye"></i> Professional Trajectory</h3>
           <p>
@@ -939,22 +871,16 @@
             As a Safety for the UNH Football Team[cite: 1], my primary responsibilities include maintaining deep coverage, diagnosing offensive formations, and communicating coverage adjustments in real time[cite: 1]. Balancing 20+ hours weekly of film study and physical training alongside academics has built strong discipline, rapid problem-solving, and team accountability[cite: 1].
           </p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-     CONTACT & FOOTER SECTION
-     ========================================================================== -->
   <section id="contact" class="contact-section">
     <div class="container">
       <h2 class="section-title">Get In Touch</h2>
       <p class="section-subtitle">Interested in internships, creative collaborations, or brand discussions? Let's connect.</p>
 
       <div class="contact-grid">
-        
-        <!-- Contact Information -->
         <div class="contact-info">
           <p>
             I am actively seeking marketing internship opportunities and brand strategy projects for Summer 2027[cite: 1]. Reach out via email or connect with me on LinkedIn!
@@ -976,8 +902,7 @@
           </div>
         </div>
 
-        <!-- Contact Form Placeholder -->
-        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <form class="contact-form" action="#" method="POST">
           <div class="form-group">
             <input type="text" name="name" placeholder="Your Name" required>
           </div>
@@ -991,10 +916,8 @@
             <i class="fas fa-paper-plane"></i> Send Message
           </button>
         </form>
-
       </div>
 
-      <!-- Footer -->
       <footer>
         <p>&copy; 2026 Myles Hansford. All rights reserved.</p>
         <div class="social-links">
@@ -1005,11 +928,7 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-     JAVASCRIPT: Smooth Navigation & Mobile Menu Toggle
-     ========================================================================== -->
   <script>
-    // Mobile Navigation Menu Toggle
     const mobileMenu = document.getElementById('mobile-menu');
     const navLinks = document.getElementById('nav-links');
 
@@ -1017,7 +936,6 @@
       navLinks.classList.toggle('active');
     });
 
-    // Close mobile menu when a navigation link is clicked
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
